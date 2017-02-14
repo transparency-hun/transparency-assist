@@ -1,0 +1,14 @@
+<div class='main-page data-table-show'>
+  <%= render 'shared/header', data_table: @data_table, tab: 'category_tab' %>
+  <%= render 'shared/menu', show_icons: true, data_table: @data_table %>
+  <div class='page-content'>
+    <% if @data_table.official? %>
+      <% @data_table.data_sources.confirmed.ordered_by_newest.each do |data_source| %>
+        <%= render 'data_source', data_source: data_source %>
+      <% end %>
+    <% else %>
+      <%= render 'data_table', data_table: @data_table, full_table: true %>
+    <% end %>
+  </div>
+  <%= render 'shared/footer' %>
+</div>

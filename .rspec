@@ -1,0 +1,7 @@
+--color
+--require spec_helper
+--require turnip/rspec
+--pattern '**/*_spec.rb,**/*.feature'
+--format progress
+-t ~@skip-ci
+--failure-exit-code 1

@@ -1,0 +1,16 @@
+<div class='menu'>
+  <% if show_icons && data_table.present? && data_table.official? %>
+    <div class='menu-item'>
+      <%= link_to manual_path, title: 'Használati útmutató' do %>
+        <img src="<%= asset_path('info-icon.svg')%>"/>
+      <% end %>
+    </div>
+    <div class='menu-separator'></div>
+    <div class='menu-item'>
+      <%= link_to show_preview_with_diff_path(data_table_id: data_table.id),
+              { remote: true, id: 'diff-toggle', title: "Változások" } do %>
+        <img src="<%= asset_path('merge-icon.svg')%>"/>
+      <% end %>
+    </div>
+  <% end %>
+</div>

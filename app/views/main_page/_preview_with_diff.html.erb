@@ -1,0 +1,23 @@
+<table class='data-table-preview-table'>
+  <% preview_with_diff.each do |row| %>
+    <% row_type = '' %>
+    <% case row[0] %>
+    <% when '+' %>
+      <% row_type = 'row-added' %>
+      <% title = 'Hozzáadott sor' %>
+    <% when '-' %>
+      <% row_type = 'row-deleted' %>
+      <% title = 'Törölt sor' %>
+    <% end %>
+    <tr class='<%="data-table-preview-table-row #{row_type}"%>' title="<%= title %>">
+      <% row.each do |cell| %>
+        <td class='data-table-preview-table-cell'>
+          <div class='data-table-preview-table-cell-data'>
+            <%= cell %>
+          </div>
+        </td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>
+<%= render 'main_page/preview_end'%>

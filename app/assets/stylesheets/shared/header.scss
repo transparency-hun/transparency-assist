@@ -1,0 +1,102 @@
+.header {
+  align-items: center;
+  background-color: $white;
+  box-shadow: 0 1px 0 0 $border-grey;
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  justify-content: flex-end;
+  margin-bottom: 1px;
+  padding: 0 24px;
+
+  &-fixed {
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
+
+  .logo {
+    margin-right: auto;
+
+    img {
+      max-height: 74px;
+      width: auto;
+    }
+  }
+
+  .tabs {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: space-between;
+    margin-right: 24px;
+  }
+
+  .tab {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+
+    &-title {
+      color: $font-darkgrey;
+      cursor: pointer;
+      font-size: 18px;
+      font-family: 'News Cycle';
+      height: 20px;
+      margin: 0 8px;
+      padding: 29px 8px;
+      text-decoration: none;
+
+      &:hover {
+        border-bottom: 2px solid $tab-blue;
+        color: $tab-blue;
+      }
+
+      &.active {
+        border-bottom: 2px solid $tab-blue;
+        color: $tab-blue;
+      }
+
+      &.selected {
+        border-bottom: 2px solid $font-darkgrey;
+        color: $font-darkgrey;
+      }
+
+      &.selected:hover {
+        border-bottom: 2px solid $font-darkgrey;
+        color: $font-darkgrey;
+      }
+    }
+
+    &-separator {
+      background-color: $border-grey;
+      height: 24px;
+      margin: auto;
+      width: 1px;
+    }
+  }
+
+  .upload-link {
+    text-decoration: none;
+
+    .button {
+      height: 36px;
+      width: 96px;
+
+      &-title {
+        font-size: 14px;
+        font-weight: 600;
+        padding: 8px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.data-table-show {
+  .tab-separator {
+    background-color: $font-darkgrey;
+  }
+}

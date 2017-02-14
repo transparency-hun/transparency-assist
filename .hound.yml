@@ -1,0 +1,19 @@
+fail_on_violations: true
+
+ruby:
+  config_file: .rubocop.yml
+
+scss:
+  config_file: .scss-lint.yml
+  exclude:
+    - "app/assets/stylesheets/plugins/**"
+
+jshint:
+  config_file: .jshintrc
+  ignore_file: .jshintignore
+
+coffeescript:
+  config_file: .coffee-lint.json
+
+haml:
+  config_file: .haml-lint.yml

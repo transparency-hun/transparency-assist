@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>7AD0F1FC-A6C5-4889-BC4C-569E01A4A5F9</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M11.9782128,0 C5.37344681,0 0,5.37344681 0,11.9782128 C0,18.5829787 5.37344681,23.9564255 11.9782128,23.9564255 C18.5829787,23.9564255 23.9564255,18.5829787 23.9564255,11.9782128 C23.9564255,5.37344681 18.5830638,0 11.9782128,0 L11.9782128,0 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23.9564255" height="23.9564255" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Transparency" transform="translate(-20.000000, -196.000000)">
+            <g id="Sidebar" transform="translate(0.000000, 176.000000)">
+                <g id="info-icon" transform="translate(20.000000, 20.000000)">
+                    <use id="Shape" stroke="#0476C7" mask="url(#mask-2)" stroke-width="3" xlink:href="#path-1"></use>
+                    <path d="M13.9041702,15.4693617 L12.4723404,16.3075745 L12.4723404,10.1977021 C12.4723404,9.93021277 12.332766,9.68212766 12.1042553,9.54323404 C11.8756596,9.40434043 11.5913191,9.39455319 11.3537872,9.51778723 L9.31285106,10.5761702 C8.9372766,10.7708936 8.7907234,11.2331915 8.98544681,11.6086809 C9.18025532,11.9842553 9.64246809,12.1308936 10.0180426,11.9360851 L10.9404255,11.4577872 L10.9404255,17.6436596 C10.9404255,17.9181277 11.0873191,18.1715745 11.3253617,18.3081702 C11.4434043,18.3758298 11.5748936,18.409617 11.706383,18.409617 C11.8401702,18.409617 11.9738723,18.3746383 12.0932766,18.304766 L14.6780426,16.7917447 C15.0431489,16.5779574 15.1658723,16.1088511 14.9521702,15.7437447 C14.7384681,15.3786383 14.2691915,15.2557447 13.9041702,15.4693617 L13.9041702,15.4693617 Z" id="Shape" fill="#0476C7"></path>
+                    <ellipse id="Oval" fill="#0476C7" cx="11.7062979" cy="7.37123404" rx="1.05829787" ry="1.05829787"></ellipse>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

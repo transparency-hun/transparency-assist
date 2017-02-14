@@ -1,0 +1,23 @@
+.button {
+  border-radius: 2px;
+  cursor: pointer;
+  text-align: center;
+
+  &-grey {
+    background-color: $button-grey;
+  }
+
+  &-blue {
+    background-color: $button-blue;
+  }
+
+  &-turquoise {
+    background-color: $button-turquoise;
+  }
+
+  &-title {
+    color: $white;
+    font-size: 12px;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,13 @@
+<% @data_sources.each do |data_source| %>
+  var container = '<%= ".data-table-preview-#{data_source.id}"%>';
+  <% if @hide_diff %>
+    $(container).html("<%= escape_javascript(render 'main_page/preview', preview: data_source.preview, full_table: true) %>");
+  <% else %>
+    $(container).html("<%= escape_javascript(render 'main_page/preview_with_diff', preview_with_diff: data_source.preview_with_diff) %>");
+  <% end %>
+<% end %>
+<% if @hide_diff %>
+  $('#diff-toggle').attr('href',  '<%= show_preview_with_diff_path(data_table_id: @data_table.id)%>');
+<% else %>
+  $('#diff-toggle').attr('href',  '<%= show_preview_with_diff_path(data_table_id: @data_table.id, hide_diff: 1)%>');
+<% end %>

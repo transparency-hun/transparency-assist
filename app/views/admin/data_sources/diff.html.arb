@@ -1,0 +1,25 @@
+# frozen_string_literal: true
+panel 'Changes from previous dataset' do
+  if previous_data_source.present?
+    paginated_collection(Kaminari.paginate_array(diffs)
+      .page(params[:page]).per(20), download_links: false, entry_name: 'Diff') do
+
+      table_for(collection, sortable: false) do
+        column '#position', :position
+        column 'Change Type', :type
+
+        data_source.changeset_headers.each do |header_info|
+          column header_info['display'] do |diff|
+            if header_info['crawler_key'] == 'link'
+              link_to header_info['display'], diff[:value][header_info['crawler_key']]
+            else
+              diff[:value][header_info['crawler_key']]
+            end
+          end
+        end
+      end
+    end
+  else
+    'No previous data present'
+  end
+end

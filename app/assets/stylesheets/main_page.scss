@@ -1,0 +1,17 @@
+// Place all the styles related to the MainPage controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "main_page/*";
+
+.main-page {
+  font-family: Open Sans;
+  height: 100%;
+  width: 100%;
+
+  .data-tables {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}

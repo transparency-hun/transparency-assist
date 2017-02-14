@@ -1,0 +1,23 @@
+<div class='upload-modal' id='upload-modal' role='dialog'>
+  <div class='modal-dialog' role='document'>
+    <div class='modal-content'>
+      <div class='modal-header'>
+        <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+        <h4 class='modal-title'>Adattábla feltöltése</h4>
+      </div>
+      <div class='modal-body'>
+        <%= render 'data_tables/upload_form', data_table: data_table, alert: alert %>
+      </div>
+      <div class='modal-footer'>
+        <div class='modal-buttons'>
+          <div type='button' class='button button-grey' data-dismiss='modal'>
+            <div class='button-title'>Bezárás</div>
+          </div>
+          <div type='button' class='button button-blue' id='upload-form-submit'>
+            <div class='button-title'>Mentés</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

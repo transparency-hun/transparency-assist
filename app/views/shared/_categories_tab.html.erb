@@ -1,0 +1,18 @@
+<div class='tab category'>
+  <%= link_to 'Összes', root_path,
+               { class:'tab-title category-title' +  (current_page?(root_url) ? ' active' : '')} %>
+    <div class='tab-separator'></div>
+</div>
+<% categories.tap do |*non_last_categories, last_category| %>
+  <% non_last_categories.each do |category| %>
+    <div class='tab category'>
+      <%= link_to category.name, index_path(category_id: category.id),
+              { class:'tab-title category-title' + (category == @selected_category ? ' active' : '')} %>
+        <div class='tab-separator'></div>
+    </div>
+  <% end %>
+  <div class='tab category'>
+    <%= link_to last_category.name, index_path(category_id: last_category.id),
+            { class:'tab-title category-title' + (last_category == @selected_category ? ' active' : '')} %>
+  </div>
+<% end %>

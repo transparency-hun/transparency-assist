@@ -1,0 +1,20 @@
+<table class='data-table-preview-table'>
+  <% preview = full_table ? preview : preview.first(21) %>
+  <% if preview.any? %>
+    <% preview.each do |row| %>
+      <tr class='data-table-preview-table-row'>
+        <% row = full_table ? row : row.first(4) %>
+        <% row.each do |cell| %>
+          <td class='data-table-preview-table-cell'>
+            <div class='data-table-preview-table-cell-data'>
+              <%= full_table || (cell && cell.include?('href=')) ? raw(cell) : truncate(cell, length: 20) %>
+            </div>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  <% else %>
+    <p class='data-table-preview-end'>--- Nincs előnézet ---</p>
+  <% end %>
+</table>
+<%= render 'main_page/preview_end' if preview.any? %>

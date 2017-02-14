@@ -1,0 +1,31 @@
+engines:
+  rubocop:
+    enabled: true
+  brakeman:
+    enabled: true
+  scss-lint:
+    enabled: true
+  coffeelint:
+    enabled: true
+    config: .coffee-lint.json
+  bundler-audit:
+    enabled: true
+  markdownlint:
+    enabled: true
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - ruby
+        #mass_threshold: 30
+      - javascript
+ratings:
+  paths:
+  - Gemfile.lock
+  - app/**
+  - lib/**
+  - "**.rb"
+exclude_paths:
+- spec/**/*
+- "**/vendor/**/*"
+- db/**/*

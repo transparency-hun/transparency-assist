@@ -1,0 +1,11 @@
+$("#modal-window").html("<%= escape_javascript(render 'data_tables/upload_modal', data_table: @data_table, alert: alert) %>");
+
+<% if alert.present? %>
+$('#alert-messages').show();
+<% end %>
+
+$('#upload-form-submit').on('click', function() {
+  $('#upload-form-submit .button-title').html('Kis türelmet..');
+  $('#upload-form').submit();
+  $('#upload-form-submit').prop('onclick', null).off('click');
+});

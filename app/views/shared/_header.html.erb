@@ -1,0 +1,13 @@
+<div class='header header-fixed'>
+  <%= render 'shared/logo' %>
+  <div class='tabs'>
+    <% if tab == 'category_tab' %>
+      <%= render 'shared/category_tab', data_table: data_table %>
+    <% elsif tab == 'categories_tab' %>
+      <%= render 'shared/categories_tab', categories: categories %>
+    <% end %>
+  </div>
+  <%= render 'shared/upload_button' %>
+</div>
+<div id='modal-window' class='modal'></div>
+<%= render 'shared/intro_modal' if current_page?(root_url) %>

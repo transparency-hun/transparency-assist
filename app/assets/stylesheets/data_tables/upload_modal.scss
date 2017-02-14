@@ -1,0 +1,71 @@
+.upload-modal, .intro-modal {
+
+  .modal-title, p {
+    font-family: 'News Cycle';
+  }
+
+  .modal-title {
+    font-size: 21px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .messages {
+    display: none;
+
+    .close {
+      text-decoration: none;
+    }
+  }
+
+  form {
+    .form-control {
+      width: 100%;
+    }
+
+    select {
+      border: 1px solid $input-border-grey;
+      height: 34px;
+      width: 100%;
+    }
+
+    .required {
+      color: $red;
+    }
+
+    label.check-box {
+      padding-left: 15px;
+      text-indent: -15px;
+
+      .form-control {
+        display: inline;
+        width: auto;
+        height: auto;
+        vertical-align: top;
+      }
+    }
+  }
+
+  .modal-buttons {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    .button {
+      margin-left: 10px;
+      padding: 7px 10px;
+
+      &-title {
+        color: $white;
+        font-size: 14px;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}

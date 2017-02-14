@@ -1,0 +1,42 @@
+<div id='alert-messages' class='messages'>
+  <% if alert.present? %>
+    <div class='<%="alert alert-dismissable alert-#{alert[:type]}"%>'>
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+      <%= alert[:message] %>
+    </div>
+  <% end %>
+</div>
+
+<%= form_for @data_table, remote: true, authenticity_token: true, format: :js, url: { controller: :data_tables, action: :create }, html: { id: 'upload-form' } do |f| %>
+  <div class='form-group'>
+    <label>Cím <span class='required'>*</span> </label>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+  <div class='form-group'>
+    <label>Fájl (xls, csv, txt)<span class='required'>*</span> </label>
+    <%= f.file_field :data_sheet, class: 'form-control' %>
+  </div>
+  <div class='form-group'>
+    <label>Leírás</label>
+    <%= f.text_field :description, class: 'form-control' %>
+  </div>
+  <div class='form-group'>
+    <label>Forrás</label>
+    <%= f.text_field :source, class: 'form-control' %>
+  </div>
+  <div class='form-group'>
+    <label>Email <br><small>Kérjük, add meg az email címedet, hogy a későbbiekben el tudjunk érni, ha bármilyen kérdésünk támadna a feltöltött adattábláddal kapcsolatban. (Nem kötelező.)</small></label>
+    <%= f.email_field :uploader_email, class: 'form-control' %>
+  </div>
+  <div class='form-group'>
+    <label class="check-box">
+    <%= f.check_box :terms_of_service, class: 'form-control' %>
+      Az Assist felhasználójaként nyilatkozom arról, hogy az általam feltölteni kívánt adatbázis adatai valóságosak, azok jogszerűen vannak a birtokomban és azokat jogszerűen teszem közzé. Elfogadom, hogy az általam feltöltött adatokért az Assist semmilyen felelősséget nem vállal.
+    </label>
+  </div>
+  <div class='form-group'>
+    <%= recaptcha_tags hl: :hu %>
+  </div>
+<% end %>
+
+

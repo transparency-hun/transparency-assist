@@ -1,0 +1,9 @@
+<div class='tab'>
+  <%= link_to data_table.category.name, index_path(category_id: data_table.category.id), { class: 'tab-title' } %>
+  <div class='tab-separator'></div>
+</div>
+<div class='tab'>
+  <div class='tab-title selected'>
+    <%= data_table.title %>
+  </div>
+</div>

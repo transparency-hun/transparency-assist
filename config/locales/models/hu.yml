@@ -1,0 +1,51 @@
+hu:
+  changeset_headers:
+    diff:
+      type: Típus
+      position: Pozíció
+    nka_hu:
+      tender_name: Pályázó neve
+      year_of_decision: Döntés éve
+      granted_amount: Megítélt összeg
+      dormitory: Kollégium
+      tender_subject: Pályázati téma
+      specialization: Szakterület
+      seat: Székhely
+    mvh_gov_hu:
+      name: Név
+      address: Cím
+      foundation: Alap
+      source: Forrás
+      sum: Támogatás összege
+    kormany_hu:
+      title: Szerződés tárgya
+      agency: Szervezet
+      published_on: Közzététel dátuma
+      link: Link
+    kozbeszerzes_hu:
+      number_of_public_procurement: Közbeszerzési Értesítő száma
+      type_of_procedure: Eljárás fajtája
+      publish_date: Közzététel dátuma
+      id: Iktatószám
+      cpv_code: CPV Kód
+      enquiring: Ajánlatkérő
+      subject: A szerződéshez rendelt elnevezés
+      description: A szerződés vagy a beszerzés(ek) rövid meghatározása
+      quantity: A közbeszerzés mennyisége
+      place_of_fulfilment: Teljesítés helye
+      number_of_tenders: Beérkezett ajánlatok száma
+      tenderers: Ajánlattevők
+      winner_enquiring: Nyertes ajánlattevő
+      sum_original: A szerződés eredetileg becsült összértéke
+      sum_final: A szerződés(ek) értéke
+      date_of_contract: A szerződéskötés dátuma
+      announcement_id: Hirdetmény száma
+    ksh_hu:
+      item: Termék (KN 1-8. poz. szerint)
+      value: Határparitásos érték forintban
+  data_categories:
+    kozbeszerzes_hu:
+      medical: Egészségügyi kellékek beszerzése
+      highway: Autópálya
+      railway: Vasút
+      communication: Kommunikációs tárgyú

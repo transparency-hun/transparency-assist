@@ -1,0 +1,25 @@
+.menu {
+  background-color: $white;
+  box-shadow: 1px 0 0 0 $border-grey;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 81px;
+  width: 64px;
+
+  &-item {
+    padding: 20px 0;
+    text-align: center;
+
+    img {
+      cursor: pointer;
+    }
+  }
+
+  &-separator {
+    background-color: $border-grey;
+    height: 1px;
+    margin: auto;
+    width: 24px;
+  }
+}

@@ -1,0 +1,42 @@
+<div class='data-table'>
+  <div class='data-table-header'>
+    <div class='data-table-title'>
+      <%= link_to "#{data_source.data_table.title} | #{data_source.updated_at.strftime('%Y.%m.%d %H:%M')}", show_path(data_table_id: data_source.data_table.id), { class: 'data-table-title-link' } %>
+    </div>
+    <div class='data-table-date'>
+      <img src="<%= asset_path('time-icon.svg')%>"/>
+      <%= data_source.updated_at.strftime('%Y.%m.%d')  %>
+    </div>
+  </div>
+  <div class='<%="data-table-preview data-table-preview-#{data_source.id}"%>'>
+    <%= render 'preview', preview: data_source.preview, full_table: true %>
+  </div>
+  <div class='data-table-footer'>
+    <div class='data-table-buttons'>
+        <%= link_to download_data_source_path(data_source, format: :xls), class: 'link' do %>
+          <div class='button button-blue button-download'>
+            <div class='button-title'>
+              Letöltés
+            </div>
+          </div>
+        <% end %>
+        <% if data_source.diff.any? %>
+          <%= link_to download_diff_data_source_path(data_source, format: :xls), class: 'link' do %>
+            <div class='button button-blue button-download'>
+              <div class='button-title'>
+                Változások letöltése
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+        <div class='button button-turquoise copy-to-clipboard' data-clipboard-text="<%= request.base_url.to_s + show_path(data_table_id: data_source.data_table.id) %>">
+          <div class='button-title'>Link másolása</div>
+        </div>
+    </div>
+    <div class='data-table-info'>
+      <div class='data-table-info-source'>
+        Forrás: <%= data_source.data_table.try(:source) %>
+      </div>
+    </div>
+  </div>
+</div>

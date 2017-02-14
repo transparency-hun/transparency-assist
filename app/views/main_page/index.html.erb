@@ -1,0 +1,7 @@
+<div class='main-page'>
+  <%= render 'shared/header', categories: @categories, tab: 'categories_tab' %>
+  <div class='page-content'>
+    <%= render 'data_tables', data_tables: @filtered_data_tables %>
+  </div>
+  <%= render 'shared/footer' %>
+</div>

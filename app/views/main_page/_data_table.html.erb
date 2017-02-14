@@ -1,0 +1,43 @@
+<div class='data-table'>
+  <div class='data-table-header'>
+    <div class='data-table-title'>
+      <%= link_to data_table.title, show_path(data_table_id: data_table.id), { class: 'data-table-title-link' } %>
+    </div>
+    <% if data_table.highlighted? %>
+      <span class='data-table-tag data-table-tag-highlighted'>
+        <div class='data-table-tag-text'>Kiemelt</div>
+      </span>
+    <% end %>
+    <% if data_table.recent? %>
+      <span class='data-table-tag data-table-tag-recent'>
+        <div class='data-table-tag-text'>Friss</div>
+      </span>
+    <% end %>
+    <div class='data-table-date'>
+      <img src="<%= asset_path('time-icon.svg')%>"/>
+      <%= data_table.updated_at.strftime('%Y.%m.%d')  %>
+    </div>
+  </div>
+  <div class='data-table-preview'>
+    <%= render 'preview', preview: data_table.preview, full_table: full_table %>
+  </div>
+  <div class='data-table-footer'>
+    <div class='data-table-buttons'>
+        <%= link_to download_path(data_table_id: data_table.id), class: 'link' do %>
+          <div class='button button-blue button-download'>
+            <div class='button-title'>
+              Letöltés
+            </div>
+          </div>
+        <% end %>
+        <div class='button button-turquoise copy-to-clipboard' data-clipboard-text="<%= request.base_url.to_s + show_path(data_table_id: data_table.id) %>">
+          <div class='button-title'>Link másolása</div>
+        </div>
+    </div>
+    <div class='data-table-info'>
+      <div class='data-table-info-source'>
+        Forrás: <%= data_table.try(:source) %>
+      </div>
+    </div>
+  </div>
+</div>

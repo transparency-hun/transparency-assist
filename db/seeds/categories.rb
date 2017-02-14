@@ -1,0 +1,6 @@
+Category.create(name: 'Kormány')
+Category.create(name: 'Közbeszerzés')
+Category.create(name: 'KSH')
+Category.create(name: 'MVH')
+Category.create(name: 'NKA')
+Category.create(name: 'Feltöltött')

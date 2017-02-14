@@ -1,0 +1,61 @@
+.footer {
+  background-color: $content-bg;
+  bottom: 0;
+  height: 72px;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+
+  .data-table-show & {
+    margin-left: 65px;
+    width: calc(100% - 64px);
+  }
+
+  &-border {
+    background-color: $border-grey;
+    height: 1px;
+    margin-left: 16px;
+  }
+
+  &-content {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 16px;
+    margin-top: 20px;
+  }
+
+  .logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    img {
+      margin-right: 24px;
+      max-height: 32px;
+    }
+  }
+
+  .static-pages {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: 16px;
+
+    a {
+      color: $font-darkgrey;
+      text-decoration: none;
+      font-family: 'News Cycle';
+      font-size: 15px;
+    }
+
+    &-separator {
+      background-color: $border-grey;
+      height: 21px;
+      margin-left: 12px;
+      margin-right: 12px;
+      width: 1px;
+    }
+  }
+}

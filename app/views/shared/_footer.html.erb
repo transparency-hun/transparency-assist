@@ -1,0 +1,22 @@
+<div class='footer'>
+  <div class='footer-border'></div>
+  <div class='footer-content'>
+    <div class='logos'>
+      <a href='https://transparency.hu/', target='blank'>
+        <img src="<%= asset_path('transparency-international-magyaroszag-logo.png')%>"/>
+      </a>
+      <a href='https://www.digitalnewsinitiative.com/', target='blank'>
+        <img src="<%= asset_path('dni-logo_200x67.png')%>"/>
+      </a>
+    </div>
+    <div class='static-pages'>
+      <%= link_to 'Impresszum', impressum_path %>
+      <div class='static-pages-separator'></div>
+      <%= link_to 'Jogi nyilatkozat', legal_notice_path %>
+      <div class='static-pages-separator'></div>
+      <%= link_to 'Használati útmutató', manual_path %>
+      <div class='static-pages-separator'></div>
+      <%= link_to 'Az Assist weboldalról', about_path %>
+    </div>
+  </div>
+</div>

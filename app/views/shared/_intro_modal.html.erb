@@ -1,0 +1,30 @@
+<div id='intro-window' class='modal'>
+  <div class='intro-modal' id='intro-modal' role='dialog'>
+    <div class='modal-dialog' role='document'>
+      <div class='modal-content'>
+        <div class='modal-header'>
+          <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+          <h4 class='modal-title'>Kedves Látogató!</h4>
+        </div>
+        <div class='modal-body'>
+          <p><iframe width="568" height="320" src="https://www.youtube.com/embed/LpGIIzYSk24?rel=0" frameborder="0" allowfullscreen></iframe></p>
+          <p><strong>Mi az Assist?</strong></p>
+          <p>Az Assist abban segít, hogy a különböző állami szervek honlapjain gyakran nehézkesen elérhető adatokat automatikusan frissítve, egyszerű Excel-adatbázisban tegye letölthetővé. Célunk, hogy a közérdekű adatok iránt érdeklődő újságírók, állampolgárok számára időt és energiát spóroljunk, továbbá, hogy az állami szervek számára pozitív példát mutassunk.</p>
+          <p><strong>Keresd ki az adatot! Töltsd le Excelben! Ennyire egyszerű!</strong></p>
+        </div>
+        <div class='modal-footer'>
+          <div class='modal-buttons'>
+            <div type='button' class='button button-grey' data-dismiss='modal'>
+              <div class='button-title'>Bezárás</div>
+            </div>
+              <div type='button' class='button button-blue'>
+            <%= link_to about_path do %>
+                <div class='button-title'>Olvass tovább!</div>
+            <% end -%>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

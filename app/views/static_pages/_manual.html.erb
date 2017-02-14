@@ -1,0 +1,44 @@
+<div class='manual'>
+  <div class='static-page-title'>HASZNÁLATI ÚTMUTATÓ</div>
+  <div class='separator'></div>
+  <div class='static-page-row'>
+    <div class='static-page-row-title'>
+      Letöltőknek
+    </div>
+    <div class='static-page-row-content'>
+      <img src="<%= asset_path('manual1.png')%>" class='download-img'/>
+    </div>
+    <div class='static-page-row-content'>
+      <img src="<%= asset_path('manual1a.png')%>" class='download-img'/>
+    </div>
+  </div>
+  <div class='static-page-row'>
+    <div class='static-page-row-title'>
+      Feltöltőknek
+    </div>
+    <div class='static-page-row-content'>
+      Jó és a későbbiekben is remekül használható, bővíthető adatbázist készíteni nem nehéz, de időigényes, és alapvetően máshogy néz ki, mint azok az adatbázisok, amelyekkel a legtöbbször találkozunk.  Van néhány fogás, amelyet érdemes észben tartani. Bár minden adatbázis kicsit más, a könnyebb felhasználhatóság érdekében mégis a következő általános eljárást tanácsoljuk:
+      <div class='hints'>
+        <div class='hint'>
+          - A felső sorba csakis az oszlopok elnevezését írjuk be, adatot soha!
+        </div>
+        <div class='hint'>
+          - Az adatbázisainkban alapvetően négy adattípust adunk meg: dátumot, helyszínt (geolokációt), számot és leíró adatot, amely lehet elnevezés, minőség, tulajdonság, cselekmény. Mindegyik típusnak van sajátossága.
+        </div>
+        <div class='hint'>
+          - Az elnevezéseknél tartsuk be a magyar vagy az angol helyesírás szabályait!
+        </div>
+        <div class='hint'>
+          - Minél több adatot adunk meg, annál jobb, értelmesebb lesz az adatbázisunk, és annál többféle felhasználásra adunk módot.
+        </div>
+        <div class='hint'>
+          - A dátumokat Év.Hónap.Nap vagy Év/Hónap/Nap formátumban adjuk meg. Az Excel átírja majd automatikusan a neki tetsző formára, de így biztosak lehetünk benne, hogy a dátumot dátumformátumnak fogja tartani egy másik Excel is és nem számformátumnak, vagy tulajdonságnak.
+        </div>
+        <div class='hint'>
+          - A helyek/helyszínek megadásánál akkor járunk el a legjobban, ha a lehető legpontosabb adatokat adjuk meg, így közterületeknél akár a pontos koordinátákat (szélesség és hosszúsági fokokat külön oszlopokban).
+        </div>
+      </div>
+      <img src="<%= asset_path('manual2.png')%>" class='upload-img'/>
+    </div>
+  </div>
+</div>

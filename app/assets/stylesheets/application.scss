@@ -1,0 +1,25 @@
+@import "variables";
+@import "shared/*";
+@import "data_tables/*";
+@import "main_page";
+@import "static_pages";
+@import "active_admin";
+@import "bootstrap";
+
+.page-content {
+  background-color: $content-bg;
+  margin-bottom: 72px;
+  margin-top: 80px;
+  min-height: calc(100vh - 152px);
+  overflow: auto;
+  padding: 8px;
+  z-index: 1;
+
+  .data-table-show {
+    max-width: calc(100% - 64px);
+  }
+
+  .data-table-show & {
+    margin-left: 64px;
+  }
+}
